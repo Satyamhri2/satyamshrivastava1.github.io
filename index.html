@@ -1,212 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satyam Shrivastava - Web Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Satyam Shrivastava, Web Developer & MarTech Specialist. View projects, skills, and experience in web development and automation.">
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: linear-gradient(to bottom, #f4f4f4, #e9ecef); color: #333; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; text-align: center; padding: 60px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        header img { border-radius: 50%; border: 5px solid white; margin-top: 20px; width: 150px; height: 150px; object-fit: cover; }
-        nav { background: #007bff; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        section { padding: 40px 20px; max-width: 900px; margin: auto; }
-        h2 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
-        .stats { display: flex; justify-content: space-around; text-align: center; margin: 20px 0; }
-        .stat { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; margin: 0 10px; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .skill-category { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .skill-category h3 { color: #007bff; }
-        .experience ul, .education ul { list-style: none; padding: 0; }
-        .experience li, .education li { background: white; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 5px solid #007bff; }
-        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .project { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .project:hover { transform: scale(1.02); }
-        .project button { background: #007bff; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; margin-top: 10px; margin-right: 10px; }
-        .project button:hover { background: #0056b3; }
-        .contact-info { display: flex; justify-content: space-around; text-align: center; margin: 20px 0; }
-        .contact-info div { flex: 1; }
-        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        form label { display: block; margin: 10px 0 5px; }
-        form input, form textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        form button { background: #28a745; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
-        form button:hover { background: #218838; }
-        footer { text-align: center; padding: 20px; background: #007bff; color: white; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satyam Shrivastava | Web Developer Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #007bff, #004aad);
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border: 5px solid #fff;
+      margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 10px auto;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 25px;
+      background: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .cta-buttons a:hover {
+      background: #218838;
+      transform: scale(1.05);
+    }
+
+    nav {
+      background: #007bff;
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 0 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .stat {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 180px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-category {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-category h3 {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      color: #007bff;
+      margin-top: 0;
+    }
+
+    .project button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .project button:hover {
+      background: #0056b3;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .contact-info div {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7em;
+      }
+      .cta-buttons a {
+        padding: 8px 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Satyam Shrivastava</h1>
-        <p>Web Developer</p>
-        <p>Building responsive, analytics-ready websites and integrating automation tools to streamline marketing workflows. 2+ years of experience bridging technology, marketing, and automation.</p>
-        <img src="https://i.imgur.com/examplephoto.jpg" alt="Profile Photo of Satyam Shrivastava"> <!-- Replace with your actual photo URL -->
-        <br><br>
-        <a href="#projects" style="background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View Projects</a>
-        <a href="#contact" style="background: #dc3545; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-left: 10px;">Get in Touch</a>
-    </header>
+  <header>
+    <img src="satyamphoto.jpeg" alt="Satyam Shrivastava Photo" />
+    <h1>Satyam Shrivastava</h1>
+    <p>Web Developer & MarTech Automation Specialist</p>
+    <p>
+      Building responsive, analytics-ready websites and automation workflows
+      using WordPress, PHP, HubSpot, and GA4. Helping businesses grow with
+      technology-driven marketing.
+    </p>
+    <div class="cta-buttons">
+      <a href="#projects">View Projects</a>
+      <a href="#contact" style="background: #dc3545;">Get in Touch</a>
+    </div>
+  </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="stats">
-            <div class="stat"><h3>2+</h3><p>Years Experience</p></div>
-            <div class="stat"><h3>4+</h3><p>Live Websites</p></div>
-            <div class="stat"><h3>Remote</h3><p>Work Mode</p></div>
-        </div>
-        <p>Dynamic and results-driven Web Developer & MarTech Automation Specialist with 2+ years of experience bridging technology, marketing, and automation. Skilled in building responsive, analytics-ready websites and integrating automation tools such as HubSpot, Zapier, and GA4 to streamline marketing and lead workflows.</p>
-        <p>Passionate about optimizing digital experiences and helping brands scale through technology-driven marketing solutions. Open to remote and hybrid roles across startups and established companies.</p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="stats">
+      <div class="stat"><h3>2+</h3><p>Years Experience</p></div>
+      <div class="stat"><h3>5+</h3><p>Live Websites</p></div>
+      <div class="stat"><h3>Remote</h3><p>Work Mode</p></div>
+    </div>
+    <p>
+      I’m a results-driven Web Developer with a strong focus on analytics and
+      automation. Experienced in PHP, WordPress, and CRM integrations, I help
+      brands streamline marketing workflows and create high-performance digital
+      experiences.
+    </p>
+  </section>
 
-    <section id="skills">
-        <h2>Core Competencies</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Web Development</h3>
-                <ul>
-                    <li>WordPress</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>MySQL</li>
-                    <li>Responsive Design</li>
-                    <li>UI/UX</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>MarTech Automation</h3>
-                <ul>
-                    <li>HubSpot CRM</li>
-                    <li>Zapier</li>
-                    <li>GA4</li>
-                    <li>Campaign Tracking</li>
-                    <li>Lead Nurturing</li>
-                    <li>Email Automation</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Analytics & SEO</h3>
-                <ul>
-                    <li>Google Analytics</li>
-                    <li>Looker Studio</li>
-                    <li>SEO Optimization</li>
-                    <li>Data Visualization</li>
-                    <li>Google Tag Manager</li>
-                    <li>Yoast SEO</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Platforms</h3>
-                <ul>
-                    <li>Jira</li>
-                    <li>Trello</li>
-                    <li>Git</li>
-                    <li>VS Code</li>
-                    <li>Canva</li>
-                    <li>Maximos CRM</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <ul class="experience">
-            <li><strong>Full Stack Developer | ICMR NIRTH via Raygain Technologies Pvt. Ltd.</strong><br>June 2023 – Present | Remote + Hybrid<br>• Created and managed the official website under the ICMR-NIRTH domain (https://www.nirth.res.in/)<br>• Built internal reporting portals using PHP, JavaScript, and MySQL<br>• Automated data workflows reducing manual entry time by 35%<br>• Enhanced website UX and analytics dashboards for operational efficiency<br>• Collaborated cross-functionally with research and IT teams</li>
-            <li><strong>Web Developer | MBG Card Pvt. Ltd.</strong><br>Aug 2022 – May 2023 | Remote<br>• Designed and developed responsive WordPress websites for multiple clients<br>• Integrated HubSpot CRM and Zapier workflows for automated lead management<br>• Improved SEO and website speed performance by 28%<br>• Implemented analytics tracking using GA4 and Looker Studio<br>• Partnered with marketing teams to build conversion-optimized landing pages</li>
-            <li><strong>Stock Management Associate | Stock Holding DMS Ltd.</strong><br>Oct 2020 – Jul 2022 | Jabalpur, India<br>• Managed CRM lifecycle data through Maximos CRM<br>• Supported backend and marketing operations with process automation<br>• Provided technical assistance across multiple communication channels</li>
-            <li><strong>EDP Assistant | Maruti Suzuki Arena</strong><br>Nov 2018 – Sep 2019 | Jabalpur, India<br>• Supported server maintenance and marketing database management<br>• Digitized promotional materials for local campaigns<br>• Updated product data across online platforms and internal systems</li>
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Web Development</h3>
+        <ul>
+          <li>WordPress, PHP, JavaScript, HTML5, CSS3</li>
+          <li>MySQL, Responsive Design, UI/UX</li>
         </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <p>A selection of websites and applications I've built, combining modern web development with marketing automation and analytics.</p>
-        <div class="projects">
-            <div class="project">
-                <h3>ICMR-NIRTH Official Website</h3>
-                <p>Comprehensive research institution website with internal reporting portals, data visualization dashboards, and automated workflows. Built with PHP, JavaScript, and MySQL.</p>
-                <p><strong>Tech:</strong> PHP, JavaScript, MySQL, Analytics</p>
-                <button onclick="window.open('https://www.nirth.res.in/', '_blank')">View Main Site</button>
-                <button onclick="window.open('https://inbix2025.icmrnirth.org/', '_blank')">View INBIX Site</button>
-            </div>
-            <div class="project">
-                <h3>Hotels in Piti Valley</h3>
-                <p>Responsive WordPress website for hospitality business with integrated CRM, automated lead management, and conversion-optimized booking flow.</p>
-                <p><strong>Tech:</strong> WordPress, HubSpot, SEO, Responsive</p>
-                <button onclick="window.open('https://hotelspitivalley.com/', '_blank')">View Live Site</button>
-            </div>
-            <div class="project">
-                <h3>Bungalows in Lonavala</h3>
-                <p>Property showcase website featuring advanced search, GA4 analytics integration, and Zapier automation for lead nurturing workflows.</p>
-                <p><strong>Tech:</strong> WordPress, GA4, Zapier, Lead Gen</p>
-                <button onclick="window.open('https://www.bungalowsinlonavala.com/', '_blank')">View Live Site</button>
-            </div>
-            <div class="project">
-                <h3>Dr. Falke Medical</h3>
-                <p>Medical practice website with appointment booking system, improved SEO performance, and Looker Studio integration for patient analytics.</p>
-                <p><strong>Tech:</strong> WordPress, SEO, Looker Studio, UI/UX</p>
-                <button onclick="window.open('https://drfalke.in/', '_blank')">View Live Site</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="education">
-        <h2>Education & Certifications</h2>
-        <ul class="education">
-            <li><strong>Master of Computer Applications (MCA)</strong> – RGPV University | 2021–2023</li>
-            <li><strong>Bachelor of Computer Applications (BCA)</strong> – MCRPU University | 2015–2018</li>
-            <li><strong>Certifications:</strong> Field Technician (Computing & Peripherals) – NSDC; Content Moderation – Anudip Foundation</li>
+      </div>
+      <div class="skill-category">
+        <h3>Automation & Analytics</h3>
+        <ul>
+          <li>HubSpot CRM, Zapier, Google Analytics (GA4)</li>
+          <li>Looker Studio, Tag Manager, SEO Optimization</li>
         </ul>
-    </section>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <ul>
+          <li>Git, Jira, Trello, VS Code, Canva, Maximos CRM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Let's Work Together</h2>
-        <p>Open to remote and hybrid opportunities. Let's discuss how I can help with your web development and MarTech automation needs.</p>
-        <div class="contact-info">
-            <div><h3>Email</h3><p>satyamshri2@gmail.com</p></div>
-            <div><h3>Phone</h3><p>+91 9074827704</p></div>
-            <div><h3>LinkedIn</h3><p><a href="https://linkedin.com/in/satyam-shrivastava-8470b6181" target="_blank">Connect on LinkedIn</a></p></div>
-            <div><h3>Work Mode</h3><p>Remote + Hybrid</p></div>
-        </div>
-        <h3>Send a Message</h3>
-        <p>Fill out the form below and I'll get back to you as soon as possible.</p>
-        <form action="mailto:satyamshri2@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>ICMR-NIRTH Official Website</h3>
+        <p>Comprehensive institutional site with internal reporting and data dashboards.</p>
+        <p><strong>Tech:</strong> PHP, JavaScript, MySQL</p>
+        <button onclick="window.open('https://icmr-nirth.res.in/', '_blank')">View Live Site</button>
+      </div>
 
-    <footer>
-        <p>&copy; 2023 Satyam Shrivastava. All rights reserved. | Portfolio built for live viewing.</p>
-    </footer>
+      <div class="project">
+        <h3>INBIX 2025 Conference (ICMR-NIRTH)</h3>
+        <p>Official website for INBIX 2025 bioinformatics conference with event registration and speaker modules.</p>
+        <p><strong>Tech:</strong> WordPress, PHP, Responsive UI</p>
+        <button onclick="window.open('https://inbix2025.icmrnirth.org/', '_blank')">View Live Site</button>
+      </div>
 
-    <script>
-        // Smooth scrolling for nav links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-        // Form submission alert
-        document.querySelector('form').addEventListener('submit', function() {
-            alert('Thank you! Your message has been sent.');
-        });
-    </script>
+      <div class="project">
+        <h3>Hotels in Piti Valley</h3>
+        <p>Responsive hospitality website with automated CRM lead capture and booking system.</p>
+        <p><strong>Tech:</strong> WordPress, HubSpot, SEO</p>
+        <button onclick="window.open('https://hotelspitivalley.com/', '_blank')">View Live Site</button>
+      </div>
+
+      <div class="project">
+        <h3>Bungalows in Lonavala</h3>
+        <p>Property showcase with GA4 tracking, lead forms, and Zapier automation.</p>
+        <p><strong>Tech:</strong> WordPress, GA4, Zapier</p>
+        <button onclick="window.open('https://www.bungalowsinlonavala.com/', '_blank')">View Live Site</button>
+      </div>
+
+      <div class="project">
+        <h3>Dr. Falke Medical</h3>
+        <p>Medical practice website with appointment booking and analytics integration.</p>
+        <p><strong>Tech:</strong> WordPress, SEO, Looker Studio</p>
+        <button onclick="window.open('https://drfalke.in/', '_blank')">View Live Site</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Let's Work Together</h2>
+    <div class="contact-info">
+      <div><h3>Email</h3><p><a href="mailto:satyamshri2@gmail.com">satyamshri2@gmail.com</a></p></div>
+      <div><h3>Phone</h3><p>+91 9074827704</p></div>
+      <div><h3>LinkedIn</h3><p><a href="#" target="_blank">Connect</a></p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Satyam Shrivastava | Web Developer Portfolio</p>
+  </footer>
 </body>
 </html>
