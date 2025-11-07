@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyam Shrivastava - Web Developer Portfolio</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: linear-gradient(to bottom, #f4f4f4, #e9ecef); color: #333; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; text-align: center; padding: 60px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        header img { border-radius: 50%; border: 5px solid white; margin-top: 20px; width: 150px; height: 150px; }
+        nav { background: #007bff; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        section { padding: 40px 20px; max-width: 900px; margin: auto; }
+        h2 { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        .stats { display: flex; justify-content: space-around; text-align: center; margin: 20px 0; }
+        .stat { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex: 1; margin: 0 10px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .skill-category { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .skill-category h3 { color: #007bff; }
+        .experience ul, .education ul { list-style: none; padding: 0; }
+        .experience li, .education li { background: white; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 5px solid #007bff; }
+        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .project { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .project:hover { transform: scale(1.02); }
+        .project button { background: #007bff; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        .project button:hover { background: #0056b3; }
+        .contact-info { display: flex; justify-content: space-around; text-align: center; margin: 20px 0; }
+        .contact-info div { flex: 1; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        form label { display: block; margin: 10px 0 5px; }
+        form input, form textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        form button { background: #28a745; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        form button:hover { background: #218838; }
+        footer { text-align: center; padding: 20px; background: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Satyam Shrivastava</h1>
+        <p>Web Developer</p>
+        <p>Building responsive, analytics-ready websites and integrating automation tools to streamline marketing workflows. 2+ years of experience bridging technology, marketing, and automation.</p>
+        <img src="https://via.placeholder.com/150" alt="Profile Photo"> <!-- Replace with your photo URL -->
+        <br><br>
+        <a href="#projects" style="background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View Projects</a>
+        <a href="#contact" style="background: #dc3545; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-left: 10px;">Get in Touch</a>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="stats">
+            <div class="stat"><h3>2+</h3><p>Years Experience</p></div>
+            <div class="stat"><h3>4+</h3><p>Live Websites</p></div>
+            <div class="stat"><h3>Remote</h3><p>Work Mode</p></div>
+        </div>
+        <p>Dynamic and results-driven Web Developer & MarTech Automation Specialist with 2+ years of experience bridging technology, marketing, and automation. Skilled in building responsive, analytics-ready websites and integrating automation tools such as HubSpot, Zapier, and GA4 to streamline marketing and lead workflows.</p>
+        <p>Passionate about optimizing digital experiences and helping brands scale through technology-driven marketing solutions. Open to remote and hybrid roles across startups and established companies.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>WordPress</li>
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>MySQL</li>
+                    <li>Responsive Design</li>
+                    <li>UI/UX</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>MarTech Automation</h3>
+                <ul>
+                    <li>HubSpot CRM</li>
+                    <li>Zapier</li>
+                    <li>GA4</li>
+                    <li>Campaign Tracking</li>
+                    <li>Lead Nurturing</li>
+                    <li>Email Automation</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Analytics & SEO</h3>
+                <ul>
+                    <li>Google Analytics</li>
+                    <li>Looker Studio</li>
+                    <li>SEO Optimization</li>
+                    <li>Data Visualization</li>
+                    <li>Google Tag Manager</li>
+                    <li>Yoast SEO</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Platforms</h3>
+                <ul>
+                    <li>Jira</li>
+                    <li>Trello</li>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                    <li>Canva</li>
+                    <li>Maximos CRM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <ul class="experience">
+            <li><strong>Full Stack Developer | ICMR NIRTH via Raygain Technologies Pvt. Ltd.</strong><br>June 2023 – Present | Remote + Hybrid<br>• Created and managed the official website under the ICMR-NIRTH domain (https://icmr-nirth.res.in/)<br>• Built internal reporting portals using PHP, JavaScript, and MySQL<br>• Automated data workflows reducing manual entry time by 35%<br>• Enhanced website UX and analytics dashboards for operational efficiency<br>• Collaborated cross-functionally with research and IT teams</li>
+            <li><strong>Web Developer | MBG Card Pvt. Ltd.</strong><br>Aug 2022 – May 2023 | Remote<br>• Designed and developed responsive WordPress websites for multiple clients<br>• Integrated HubSpot CRM and Zapier workflows for automated lead management<br>• Improved SEO and website speed performance by 28%<br>• Implemented analytics tracking using GA4 and Looker Studio<br>• Partnered with marketing teams to build conversion-optimized landing pages</li>
+            <li><strong>Stock Management Associate | Stock Holding DMS Ltd.</strong><br>Oct 2020 – Jul 2022 | Jabalpur, India<br>• Managed CRM lifecycle data through Maximos CRM<br>• Supported backend and marketing operations with process automation<br>• Provided technical assistance across multiple communication channels</li>
+            <li><strong>EDP Assistant | Maruti Suzuki Arena</strong><br>Nov 2018 – Sep 2019 | Jabalpur, India<br>• Supported server maintenance and marketing database management<br>• Digitized promotional materials for local campaigns<br>• Updated product data across online platforms and internal systems</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <p>A selection of websites and applications I've built, combining modern web development with marketing automation and analytics.</p>
+        <div class="projects">
+            <div class="project">
+                <h3>ICMR-NIRTH Official Website</h3>
+                <p>Comprehensive research institution website with internal reporting portals, data visualization dashboards, and automated workflows. Built with PHP, JavaScript, and MySQL.</p>
+                <p><strong>Tech:</strong> PHP, JavaScript, MySQL, Analytics</p>
+                <button onclick="window.open('https://icmr-nirth.res.in/', '_blank')">View Live Site</button>
+            </div>
+            <div class="project">
+                <h3>Hotels in Piti Valley</h3>
+                <p>Responsive WordPress website for hospitality business with integrated CRM, automated lead management, and conversion-optimized booking flow.</p>
+                <p><strong>Tech:</strong> WordPress, HubSpot, SEO, Responsive</p>
+                <button onclick="alert('Live site link not provided—replace with actual URL.')">View Live Site</button>
+            </div>
+            <div class="project">
+                <h3>Bungalows in Lonavala</h3>
+                <p>Property showcase website featuring advanced search, GA4 analytics integration, and Zapier automation for lead nurturing workflows.</p>
+                <p><strong>Tech:</strong> WordPress, GA4, Zapier, Lead Gen</p>
+                <button onclick="alert('Live site link not provided—replace with actual URL.')">View Live Site</button>
+            </div>
+            <div class="project">
+                <h3>Dr. Falke Medical</h3>
+                <p>Medical practice website with appointment booking system, improved SEO performance, and Looker Studio integration for patient analytics.</p>
+                <p><strong>Tech:</strong> WordPress, SEO, Looker Studio, UI/UX</p>
+                <button onclick="alert('Live site link not provided—replace with actual URL.')">View Live Site</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education & Certifications</h2>
+        <ul class="education">
+            <li><strong>Master of Computer Applications (MCA)</strong> – RGPV University | 2021–2023</li>
+            <li><strong>Bachelor of Computer Applications (BCA)</strong> – MCRPU University | 2015–2018</li>
+            <li><strong>Certifications:</strong> Field Technician (Computing & Peripherals) – NSDC; Content Moderation – Anudip Foundation</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Let's Work Together</h2>
+        <p>Open to remote and hybrid opportunities. Let's discuss how I can help with your web development and MarTech automation needs.</p>
+        <div class="contact-info">
+            <div><h3>Email</h3><p>satyamshri2@gmail.com</p></div>
+            <div><h3>Phone</h3><p>+91 9074827704</p></div>
+            <div><h
