@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Satyam Shrivastava | CRM & WordPress Developer | HubSpot Specialist</title>
-<meta name="description" content="Satyam Shrivastava - CRM & WordPress Developer specializing in HubSpot automation, GA4 tracking, SEO optimization, and high-performance websites.">
-<meta name="keywords" content="HubSpot CRM Specialist, WordPress Developer India, GA4 Expert, Zapier Automation, SEO Developer, Frontend Developer">
+<title>Satyam Shrivastava | CRM & Automation Specialist | WordPress Developer</title>
+<meta name="description" content="5+ Years experienced CRM & WordPress Developer specializing in HubSpot automation, GA4 tracking, SEO and performance-driven web solutions.">
+<meta name="keywords" content="HubSpot CRM Specialist, WordPress Developer India, Automation Expert, GA4 Tracking, SEO Developer">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -16,7 +16,7 @@ html{scroll-behavior:smooth;}
 body{
 background:linear-gradient(-45deg,#0f172a,#1e293b,#0f172a,#111827);
 background-size:400% 400%;
-animation:gradient 12s ease infinite;
+animation:gradient 15s ease infinite;
 color:#fff;
 }
 
@@ -26,11 +26,11 @@ color:#fff;
 100%{background-position:0% 50%;}
 }
 
-section{padding:100px 8%;}
-h2{text-align:center;font-size:36px;margin-bottom:60px;font-weight:700;}
+section{padding:90px 8%;}
+h2{text-align:center;font-size:34px;margin-bottom:50px;}
 
 header{
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -38,8 +38,18 @@ align-items:center;
 text-align:center;
 }
 
+.profile-img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #3b82f6;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(59,130,246,0.5);
+}
+
 header h1{
-font-size:52px;
+font-size:48px;
 font-weight:800;
 background:linear-gradient(90deg,#3b82f6,#06b6d4);
 -webkit-background-clip:text;
@@ -47,88 +57,80 @@ background:linear-gradient(90deg,#3b82f6,#06b6d4);
 }
 
 header p{
-margin-top:20px;
-font-size:20px;
+margin-top:15px;
+font-size:18px;
 color:#cbd5e1;
-max-width:700px;
+max-width:750px;
 }
 
 .btn{
-margin-top:35px;
-padding:14px 30px;
+margin-top:25px;
+padding:12px 28px;
 border-radius:30px;
 background:linear-gradient(90deg,#3b82f6,#06b6d4);
 color:#fff;
 text-decoration:none;
 font-weight:600;
+display:inline-block;
 transition:0.3s;
 }
 
 .btn:hover{
 transform:scale(1.05);
-box-shadow:0 10px 30px rgba(59,130,246,0.5);
+box-shadow:0 10px 25px rgba(59,130,246,0.4);
 }
 
-.glass{
+.card{
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.1);
-border-radius:20px;
-padding:40px;
+padding:30px;
+border-radius:15px;
+margin-bottom:25px;
+transition:0.3s;
+}
+
+.card:hover{
+background:rgba(59,130,246,0.15);
+transform:translateY(-5px);
 }
 
 .skills{
 display:flex;
 flex-wrap:wrap;
-gap:15px;
+gap:12px;
 justify-content:center;
 }
 
 .skill{
-padding:12px 20px;
-border-radius:25px;
+padding:10px 18px;
 background:rgba(255,255,255,0.08);
-transition:0.3s;
+border-radius:25px;
+font-size:14px;
 }
 
-.skill:hover{
-background:#3b82f6;
-transform:translateY(-5px);
-}
-
-.projects{
+.project-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .project{
-padding:30px;
-border-radius:20px;
 background:rgba(255,255,255,0.05);
-transition:0.4s;
-position:relative;
-overflow:hidden;
+padding:25px;
+border-radius:15px;
+transition:0.3s;
 }
 
 .project:hover{
-transform:translateY(-10px);
-background:rgba(59,130,246,0.15);
+transform:translateY(-8px);
+background:rgba(59,130,246,0.2);
 }
 
-.project h3{
-margin-bottom:15px;
-color:#3b82f6;
-}
-
-.project p{
-font-size:14px;
-color:#cbd5e1;
-margin-bottom:10px;
-}
+.project h3{color:#3b82f6;margin-bottom:10px;}
+.project p{font-size:14px;color:#cbd5e1;}
 
 .project button{
-padding:8px 15px;
+margin-top:10px;
+padding:7px 14px;
 border:none;
 border-radius:20px;
 background:#3b82f6;
@@ -136,21 +138,29 @@ color:#fff;
 cursor:pointer;
 }
 
-.contact{
-text-align:center;
-}
-
-.contact a{
-color:#3b82f6;
-text-decoration:none;
-}
+.contact{text-align:center;}
+.contact a{color:#3b82f6;text-decoration:none;}
 
 footer{
 text-align:center;
-padding:30px;
+padding:25px;
 background:rgba(255,255,255,0.05);
-font-size:14px;
 color:#94a3b8;
+}
+
+/* Scroll Button */
+#topBtn{
+position:fixed;
+bottom:30px;
+right:30px;
+display:none;
+background:#3b82f6;
+color:#fff;
+border:none;
+padding:12px 16px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
 }
 </style>
 </head>
@@ -158,136 +168,119 @@ color:#94a3b8;
 <body>
 
 <header>
+<img src="satyam.jpeg" alt="Satyam Shrivastava" class="profile-img">
 <h1>Satyam Shrivastava</h1>
-<p>CRM (HubSpot) Specialist & WordPress Developer building automation-driven, SEO-optimized, high-performance websites.</p>
-<a href="#projects" class="btn">Explore My Work</a>
+<p>CRM & Automation Specialist with 5+ Years of Experience in HubSpot, WordPress & Performance Optimization.</p>
+<a href="#projects" class="btn">View Projects</a>
+<a href="Satyam_Shrivastava_CV.pdf" class="btn">Download CV</a>
 </header>
 
 <section>
-<h2>Professional Summary</h2>
-<div class="glass">
-<p>
-CRM & Web Developer with 3+ years of experience in HubSpot CRM, WordPress, PHP, and automation tools like Zapier.
-Specialized in lead management, lifecycle workflows, GA4 tracking, CRM integration, and website performance optimization.
-Reduced manual lead handling time by 40% through automation implementation.
-</p>
-</div>
-</section>
-<section>
 <h2>Professional Experience</h2>
-<div class="projects">
 
-<div class="project">
-<h3>CRM & Web Executive — ICMR-NIRTH (via Raygain Technologies)</h3>
-<p><strong>June 2023 – Present</strong></p>
-<p>
-• Developed & managed WordPress websites with custom PHP logic<br>
-• Integrated HubSpot CRM with WordPress for advanced lead capture<br>
-• Built automation workflows using HubSpot & Zapier<br>
-• Implemented GA4 & GTM event tracking<br>
-• Reduced manual lead handling time by 40%
-</p>
+<div class="card">
+<h3>CRM & Web Executive — ICMR-NIRTH (June 2023 – Present)</h3>
+<p>• Developed & managed WordPress websites using PHP<br>
+• Integrated HubSpot CRM & automation workflows<br>
+• Implemented GA4 & GTM tracking<br>
+• Reduced manual lead handling time by 40%</p>
 </div>
 
-<div class="project">
-<h3>WordPress Developer — MBG Card Pvt. Ltd.</h3>
-<p><strong>Aug 2022 – May 2023</strong></p>
-<p>
-• Developed & maintained multiple WordPress websites<br>
-• Integrated HubSpot forms & CRM syncing<br>
-• Improved UI/UX and SEO performance<br>
-• Built automated email workflows
-</p>
+<div class="card">
+<h3>WordPress Developer — MBG Card Pvt. Ltd. (Aug 2022 – May 2023)</h3>
+<p>• Built & optimized multiple WordPress websites<br>
+• Integrated HubSpot & email automation<br>
+• Improved SEO & performance metrics</p>
 </div>
 
-<div class="project">
-<h3>CRM Assistant — Stock Holding DMS Ltd.</h3>
-<p><strong>2020 – 2022</strong></p>
-<p>
-• Managed CRM operations & automation<br>
-• Data cleaning, segmentation & reporting<br>
-• Supported lead lifecycle management
-</p>
+<div class="card">
+<h3>CRM Assistant — Stock Holding DMS Ltd. (2020 – 2022)</h3>
+<p>• Managed CRM operations & segmentation<br>
+• Data reporting & workflow support</p>
 </div>
 
-</div>
 </section>
 
 <section>
 <h2>Core Skills</h2>
 <div class="skills">
 <div class="skill">HubSpot CRM</div>
-<div class="skill">Zapier Automation</div>
+<div class="skill">Zapier</div>
 <div class="skill">WordPress</div>
 <div class="skill">PHP</div>
-<div class="skill">HTML / CSS / JS</div>
 <div class="skill">GA4 & GTM</div>
-<div class="skill">SEO Optimization</div>
-<div class="skill">Performance Tuning</div>
-<div class="skill">CRM Integration</div>
+<div class="skill">SEO</div>
+<div class="skill">Automation</div>
+<div class="skill">UI/UX</div>
 </div>
 </section>
 
 <section id="projects">
 <h2>Featured Projects</h2>
-<div class="projects">
+<div class="project-grid">
 
 <div class="project">
-<h3>ICMR-NIRTH Official Website</h3>
-<p>Government research institute website with structured CMS and optimized performance.</p>
-<p><strong>Tech:</strong> WordPress, PHP, SEO</p>
+<h3>ICMR-NIRTH</h3>
+<p>Official government research institute website.</p>
 <button onclick="window.open('https://nirth.res.in','_blank')">View</button>
 </div>
 
 <div class="project">
-<h3>INBIX 2025 Conference</h3>
-<p>Bioinformatics conference portal with registration and speaker modules.</p>
-<p><strong>Tech:</strong> WordPress, Responsive UI</p>
+<h3>INBIX 2025</h3>
+<p>Conference portal with registration & automation.</p>
 <button onclick="window.open('https://inbix2025.icmrnirth.org/','_blank')">View</button>
 </div>
 
 <div class="project">
 <h3>Hotels in Piti Valley</h3>
-<p>Hospitality website with automated HubSpot lead capture and booking workflow.</p>
-<p><strong>Tech:</strong> WordPress, CRM, SEO</p>
+<p>CRM integrated booking & SEO optimized site.</p>
 <button onclick="window.open('https://hotelspitivalley.com/','_blank')">View</button>
 </div>
 
 <div class="project">
 <h3>Bungalows in Lonavala</h3>
-<p>Property showcase with GA4 event tracking & Zapier automation.</p>
-<p><strong>Tech:</strong> WordPress, GA4, Zapier</p>
-<button onclick="window.open('https://www.bungalowsinlonavala.com/','_blank')">View</button>
+<p>GA4 tracking & Zapier automation.</p>
+<button onclick="window.open('https://bungalowsinlonavala.com','_blank')">View</button>
 </div>
 
 <div class="project">
 <h3>Dr. Falke Clinic</h3>
-<p>Medical website with appointment booking & analytics dashboard integration.</p>
-<p><strong>Tech:</strong> WordPress, Looker Studio</p>
-<button onclick="window.open('https://drfalke.in/','_blank')">View</button>
-</div>
-
-<div class="project">
-<h3>UV Art Gallery</h3>
-<p>Interactive responsive art gallery with modern UI design.</p>
-<p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-<button onclick="window.open('https://thecodecraftlabs.github.io/UvArt_Gallery/','_blank')">View</button>
+<p>Medical booking & analytics dashboard integration.</p>
+<button onclick="window.open('https://drfalke.in','_blank')">View</button>
 </div>
 
 </div>
 </section>
 
 <section class="contact">
-<h2>Let's Work Together</h2>
+<h2>Contact</h2>
 <p>Email: <a href="mailto:satyamshri2@gmail.com">satyamshri2@gmail.com</a></p>
 <p>Phone: +91 9074827704</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/satyam-shrivastava/" target="_blank">Profile</a></p>
-<p>GitHub: <a href="https://github.com/satyamhri2" target="_blank">github.com/satyamhri2</a></p>
+<p>LinkedIn: <a href="https://linkedin.com/in/satyam-shrivastava" target="_blank">Profile</a></p>
+<p>GitHub: <a href="https://github.com/satyamhri2" target="_blank">GitHub</a></p>
 </section>
 
 <footer>
-© 2026 Satyam Shrivastava | CRM & WordPress Developer Portfolio
+© 2026 Satyam Shrivastava | 5+ Years Experience
 </footer>
+
+<button onclick="topFunction()" id="topBtn">↑</button>
+
+<script>
+let mybutton=document.getElementById("topBtn");
+window.onscroll=function(){scrollFunction()};
+function scrollFunction(){
+if(document.body.scrollTop>300||document.documentElement.scrollTop>300){
+mybutton.style.display="block";
+}else{
+mybutton.style.display="none";
+}
+}
+function topFunction(){
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
+}
+</script>
 
 </body>
 </html>
