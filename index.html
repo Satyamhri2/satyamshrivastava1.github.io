@@ -4,212 +4,419 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Satyam Shrivastava | WordPress Developer | CRM & Digital Marketing Specialist</title>
+<title>Satyam Shrivastava | CRM, WordPress & Digital Marketing Specialist</title>
 
-<meta name="description" content="MCA graduate with 5+ years of experience in WordPress Development, HubSpot CRM Automation, Digital Marketing, Social Media Branding, GA4 & GTM implementation, and Technical SEO.">
+<meta name="description" content="Professional with 3+ years of experience in WordPress Development, HubSpot CRM Automation, Digital Marketing, Social Media Branding, GA4 & GTM implementation, and Technical SEO.">
 <meta name="keywords" content="WordPress Developer India, HubSpot CRM Specialist, Digital Marketing Executive, Canva Designer, Social Media Management, GA4 Implementation, Google Tag Manager, Technical SEO Audit, Core Web Vitals Optimization, Zapier Automation">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --primary: #3b82f6;
+    --secondary: #10b981;
+    --accent: #8b5cf6;
+    --border-color: #334155;
+}
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 html{scroll-behavior:smooth;}
-body{background:#0f172a;color:#fff;}
-section{padding:70px 8%;}
-h2{text-align:center;font-size:30px;margin-bottom:40px;color:#3b82f6;}
+body{background: var(--bg-dark); color: var(--text-main); line-height: 1.6;}
+section{padding:80px 10%; border-bottom: 1px solid var(--border-color);}
 
+/* Global Titles */
+h2 {
+    text-align:center;
+    font-size:32px;
+    font-weight: 800;
+    margin-bottom:50px;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Header / Hero Section */
 header{
-min-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
+    min-height:95vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding: 40px 5%;
+    background: radial-gradient(circle at top, #1e1b4b 0%, var(--bg-dark) 70%);
 }
 
 .profile-img{
-width:160px;
-height:160px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #3b82f6;
-margin-bottom:20px;
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--primary);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+    margin-bottom:25px;
 }
 
-header h1{font-size:40px;font-weight:800;}
-header p{margin-top:15px;max-width:850px;color:#cbd5e1;font-size:16px;}
+header h1{font-size:46px; font-weight:800; letter-spacing: -1px; margin-bottom: 5px;}
+.subtitle {
+    font-size: 18px; 
+    color: var(--primary); 
+    font-weight: 600; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+header p{max-width:800px; color: var(--text-muted); font-size:16px; margin-bottom: 30px;}
 
+/* Contact Info Grid */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+.contact-item {
+    background: rgba(255,255,255,0.05);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+/* Button Styling */
+.btn-container { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
 .btn{
-margin-top:15px;
-padding:10px 22px;
-border-radius:25px;
-background:#3b82f6;
-color:#fff;
-text-decoration:none;
-font-weight:600;
-display:inline-block;
+    padding:12px 26px;
+    border-radius:30px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6); }
+.btn.secondary-btn {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    box-shadow: none;
+}
+.btn.secondary-btn:hover { background: rgba(255,255,255,0.05); border-color: var(--text-muted); }
+
+/* Skills Grid */
+.skills-category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 12px;
+}
+.skill-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-muted);
 }
 
+/* Experience Cards */
+.experience-container { max-width: 900px; margin: 0 auto; }
 .card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
+    background: var(--card-bg);
+    border-left: 4px solid var(--primary);
+    padding: 30px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 30px;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
+.card h3 { font-size: 20px; color: var(--text-main); margin-bottom: 5px; }
+.company-meta { font-size: 14px; color: var(--secondary); font-weight: 500; margin-bottom: 15px; }
+ul{padding-left: 20px;}
+ul li{margin-bottom:10px; color: var(--text-muted); font-size: 15px;}
+ul li strong { color: var(--text-main); }
 
-ul{padding-left:20px;}
-ul li{margin-bottom:8px; color:#cbd5e1;}
-.skills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
-.skill{background:#1e293b;padding:8px 14px;border-radius:20px;font-size:13px;}
-.project{background:#1e293b;padding:20px;border-radius:10px;margin-bottom:15px;}
-a{color:#3b82f6;text-decoration:none;}
-footer{text-align:center;padding:20px;background:#111827;}
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+.project-card:hover { transform: translateY(-5px); }
+.project-card h3 { font-size: 19px; margin-bottom: 10px; color: var(--text-main); }
+.project-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1; }
+.project-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+.project-link:hover { text-decoration: underline; }
+
+/* Grid Splitter for Education, Certifications & Info */
+.info-splitter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+.info-block {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+.info-block h3 { margin-bottom: 20px; font-size: 20px; color: var(--primary); }
+
+footer{text-align:center; padding:30px; background:#0b111e; color: var(--text-muted); font-size: 14px; border-top: 1px solid var(--border-color);}
+
+@media(max-width: 768px) {
+    header h1 { font-size: 32px; }
+    section { padding: 50px 5%; }
+    h2 { font-size: 26px; }
+}
 </style>
 </head>
 
 <body>
 
+<!-- Header / Personal Branding -->
 <header>
 <img src="satyam.jpeg" alt="Satyam Shrivastava" class="profile-img">
 <h1>Satyam Shrivastava</h1>
+<div class="subtitle">Digital Marketing • CRM • Marketing Automation • Web Dev</div>
 
 <p>
-<strong>MCA | CRM & Web Executive | Digital Marketing & Automation Specialist</strong><br>
-Results-driven Professional with 5+ years of experience specializing in WordPress Development, HubSpot CRM Automation, Digital Marketing, and Social Media Branding. Adept at managing high-performance websites, creating engaging visual content via Canva, managing social media channels, and optimizing user tracking (GA4 & GTM). Proven track record in lead management, technical SEO, and scaling digital operations.
+Results-driven Digital Marketing & CRM Professional with 3+ years of strategic hands-on experience driving organic growth, optimizing conversion pathways, and scaling automated systems. Proven track record in orchestrating high-performance WordPress sites, streamlining HubSpot lead management workflows, creating multi-channel content, and structural tracking setups (GA4/GTM).
 </p>
 
-<a href="https://satyamhri2.github.io/code-craft/" target="_blank" class="btn">Visit Portfolio Website</a>
-<a href="SATYAM SHRIVASTAVA Digital.pdf" class="btn">Download Resume</a>
+<div class="contact-info">
+    <div class="contact-item">📍 Jabalpur, Madhya Pradesh</div>
+    <div class="contact-item">📞 +91 9074827704</div>
+    <div class="contact-item">📧 satyamshri2@gmail.com</div>
+</div>
+
+<div class="btn-container">
+    <a href="https://satyamhri2.github.io/code-craft/" target="_blank" class="btn">Visit Portfolio Website</a>
+    <a href="SATYAM SHRIVASTAVA Digital.pdf" class="btn secondary-btn">Download Resume</a>
+</div>
 </header>
 
-<section>
+<!-- Categorized Technical & Functional Skills -->
+<section id="skills">
 <h2>Core Competencies</h2>
-<div class="skills">
-<div class="skill">WordPress Development</div>
-<div class="skill">HubSpot CRM Workflows</div>
-<div class="skill">Digital Marketing & Lead Generation</div>
-<div class="skill">Social Media Management (FB & Insta)</div>
-<div class="skill">Canva Graphic Designing</div>
-<div class="skill">GA4 & Google Tag Manager</div>
-<div class="skill">Technical SEO & Schema Markup</div>
-<div class="skill">Core Web Vitals Optimization</div>
-<div class="skill">Zapier Automation</div>
-<div class="skill">Client Coordination</div>
+<div class="skills-category-container">
+    <div class="skill-card">
+        <h3>Digital Marketing & Brand</h3>
+        <div class="skill-tags">
+            <span class="tag">Social Media Strategy</span>
+            <span class="tag">Facebook & Insta Ads</span>
+            <span class="tag">Content Marketing</span>
+            <span class="tag">Branding & Creatives</span>
+            <span class="tag">Lead Generation</span>
+        </div>
+    </div>
+    <div class="skill-card">
+        <h3>CRM & Marketing Automation</h3>
+        <div class="skill-tags">
+            <span class="tag">HubSpot CRM Operations</span>
+            <span class="tag">Lead Lifecycle Management</span>
+            <span class="tag">Custom Automation Workflows</span>
+            <span class="tag">Zapier Cross-Sync</span>
+            <span class="tag">Data Segmentation</span>
+        </div>
+    </div>
+    <div class="skill-card">
+        <h3>Web Development & SEO</h3>
+        <div class="skill-tags">
+            <span class="tag">WordPress Ecosystem</span>
+            <span class="tag">On-Page & Technical SEO</span>
+            <span class="tag">Schema Markup Data</span>
+            <span class="tag">Core Web Vitals Boost</span>
+            <span class="tag">HTML5 / CSS3 / PHP / JS</span>
+        </div>
+    </div>
+    <div class="skill-card">
+        <h3>Design & Analytics</h3>
+        <div class="skill-tags">
+            <span class="tag">Canva Visual Design</span>
+            <span class="tag">Adobe Photoshop (Basic)</span>
+            <span class="tag">Google Analytics 4 (GA4)</span>
+            <span class="tag">Google Tag Manager (GTM)</span>
+            <span class="tag">Custom Tracking Setups</span>
+        </div>
+    </div>
 </div>
 </section>
 
-<section>
+<!-- Professional Experience Work History -->
+<section id="experience">
 <h2>Professional Experience</h2>
+<div class="experience-container">
 
-<div class="card">
-<h3>CRM & Web Executive — ICMR-NIRTH (via Raygain Technologies) (Jun 2023 – Present)</h3>
-<ul>
-<li>Led the management, development, and optimization of high-traffic WordPress websites serving 1M+ annual users.</li>
-<li>Handled full-suite Digital Marketing operations, including managing official Instagram and Facebook pages to boost community engagement.</li>
-<li>Designed impactful digital creatives, institutional posters, and marketing assets for ICMR using Canva.</li>
-<li>Improved PageSpeed score from 62 to 92+ by optimizing LCP, CLS, and asset delivery.</li>
-<li>Integrated HubSpot CRM workflows and automated lead management systems, reducing manual handling by 40%.</li>
-<li>Implemented GA4 & GTM event tracking to measure user journeys, improving conversion rates by 18%.</li>
-<li>Executed comprehensive Technical SEO audits (schema, sitemap, robots.txt) and reduced bounce rate by 15%.</li>
-</ul>
-</div>
+    <div class="card">
+        <h3>CRM & Web Executive</h3>
+        <div class="company-meta">ICMR-NIRTH (via Raygain Technologies) | Jun 2023 – Present</div>
+        <ul>
+            <li><strong>Social Media & Branding Lead:</strong> Directly heading the official <strong>ICMR Instagram and Facebook pages</strong>, producing and handling modern graphic layouts and engagement strategies.</li>
+            <li><strong>Visual Asset Design:</strong> Designed impactful public institutional banners, healthcare event posters, and internal digital marketing assets natively using <strong>Canva</strong>.</li>
+            <li><strong>Website Architecture & Speed:</strong> Managed full maintenance of official scalable platforms, drastically enhancing load parameters and Core Web Vitals (improving PageSpeed indexes from 62 to 92+).</li>
+            <li><strong>Automation Engineering:</strong> Built dynamic cross-platform triggers via <strong>HubSpot CRM and Zapier</strong>, trimming redundant data pipelines and lowering manual lead-routing tasks by 40%.</li>
+            <li><strong>Advanced Marketing Analytics:</strong> Deployed end-to-end <strong>GA4 custom tracking and Google Tag Manager</strong> macro event logic, generating granular behavior insight and elevating performance conversion architectures by 18%.</li>
+        </ul>
+    </div>
 
-<div class="card">
-<h3>WordPress Developer — MBG Card Pvt. Ltd. (Aug 2022 – May 2023)</h3>
-<ul>
-<li>Developed SEO-optimized WordPress websites with custom structured schema markup and enhanced UI/UX design.</li>
-<li>Enhanced organic search visibility by 25% through consistent on-page and technical SEO implementation.</li>
-<li>Implemented automated email workflows and data syncing via HubSpot CRM integrations.</li>
-<li>Optimized caching, CDN integration, and image compression, improving overall website load time by 35%.</li>
-</ul>
-</div>
+    <div class="card">
+        <h3>WordPress Developer</h3>
+        <div class="company-meta">MBG Card Pvt. Ltd. | Aug 2022 – May 2023</div>
+        <ul>
+            <li><strong>Core Site Architecture:</strong> Developed and maintained clean, highly transactional responsive themes integrated with tailored <strong>HubSpot CRM</strong> intake frameworks.</li>
+            <li><strong>Organic Visibility Architecture:</strong> Engineered technical and on-page structural SEO enhancements alongside JSON-LD structured data layouts, resulting in an immediate 25% surge in index optimization.</li>
+            <li><strong>Front-End Execution:</strong> Coordinated UI/UX wireframing principles utilizing atomic layout design styles to drastically improve user retention models and layout performance times by 35%.</li>
+        </ul>
+    </div>
 
-<div class="card">
-<h3>CRM Assistant — Stock Holding DMS Ltd. (2020 – 2022)</h3>
-<ul>
-<li>Managed CRM operations, data segmentation, and client reporting dashboards.</li>
-<li>Improved workflow efficiency and reporting structure while handling customer support and client coordination.</li>
-</ul>
-</div>
+    <div class="card">
+        <h3>CRM Assistant</h3>
+        <div class="company-meta">Stock Holding DMS Ltd. | 2020 – 2022</div>
+        <ul>
+            <li><strong>Database & Reporting Operations:</strong> Directed granular workflow filtering, data health management, and structural reporting matrices across enterprise operational branches.</li>
+            <li><strong>Client Coordination Support:</strong> Delivered end-to-end customer care management solutions, helping sync data architectures and technical client feedback workflows efficiently.</li>
+        </ul>
+    </div>
 
-</section>
-
-<section>
-<h2>Key Projects</h2>
-
-<div class="project">
-<h3>ICMR-NIRTH Portal</h3>
-<p>Website management, Technical SEO Audit, Core Web Vitals Optimization, and GA4 tracking setup.</p>
-<a href="https://nirth.res.in" target="_blank">https://nirth.res.in</a>
-</div>
-
-<div class="project">
-<h3>INBIX 2025 Conference Portal</h3>
-<p>End-to-end registration workflow optimization, HubSpot CRM automation, and event tracking.</p>
-<a href="https://inbix2025.icmrnirth.org/" target="_blank">https://inbix2025.icmrnirth.org/</a>
-</div>
-
-<div class="project">
-<h3>Hotels in Spiti Valley</h3>
-<p>SEO-optimized hospitality website integrated with automated HubSpot lead capturing.</p>
-<a href="https://hotelspitivalley.com/" target="_blank">https://hotelspitivalley.com/</a>
-</div>
-
-<div class="project">
-<h3>Bungalows in Lonavala</h3>
-<p>Real estate conversion tracking using GA4, GTM, and Zapier lead routing automation.</p>
-<a href="https://bungalowsinlonavala.com/" target="_blank">https://bungalowsinlonavala.com/</a>
-</div>
-
-<div class="project">
-<h3>Dr. Falke Clinic</h3>
-<p>Healthcare appointment booking system utilizing structured data and custom WordPress → HubSpot sync.</p>
-<a href="https://drfalke.in/" target="_blank">https://drfalke.in/</a>
-</div>
-
-<div class="project">
-<h3>UV Art Gallery</h3>
-<p>Animated responsive art portfolio with modern UI/UX design components.</p>
-  <a href="https://thecodecraftlabs.github.io/UvArt_Gallery/" target="_blank">https://thecodecraftlabs.github.io/UvArt_Gallery/</a>
- </div>
-</section>
-
-<section>
-<h2>Education</h2>
-<div class="card">
-<p>
-<strong>Master of Computer Applications (MCA)</strong> — MCRPV University<br>
-<strong>Bachelor of Computer Applications (BCA)</strong> — RGPV University
-</p>
 </div>
 </section>
 
-<section>
-<h2>Technical Tools & Skills</h2>
-<div class="card">
-<p>
-<strong>Web & Dev:</strong> WordPress, PHP, MySQL, HTML5, CSS3, JavaScript, REST API<br>
-<strong>CRM & Automation:</strong> HubSpot CRM, Lead Management, Zapier Workflows<br>
-<strong>Digital Marketing & Design:</strong> Canva, Photoshop (Basic), Social Media Branding (FB/Insta), Content Strategy<br>
-<strong>Analytics & SEO:</strong> GA4, Google Tag Manager (GTM), Technical SEO, Schema Markup, Core Web Vitals, CDN & Caching
-</p>
+<!-- Practical Industry Level Projects -->
+<section id="projects">
+<h2>Key Project Portfolio</h2>
+<div class="projects-grid">
+    <div class="project-card">
+        <div>
+            <h3>ICMR-NIRTH Portal</h3>
+            <p>Maintained infrastructure codebase, integrated comprehensive Technical SEO audits, handled Core Web Vitals optimization, and built complex behavior monitoring schemas via GA4.</p>
+        </div>
+        <a href="https://nirth.res.in" target="_blank" class="project-link">Launch Project &rarr;</a>
+    </div>
+
+    <div class="project-card">
+        <div>
+            <h3>INBIX 2025 Portal</h3>
+            <p>Full-cycle website management, custom automated event registration matrices, and optimized tracking analytics setups.</p>
+        </div>
+        <a href="https://inbix2025.icmrnirth.org/" target="_blank" class="project-link">Launch Project &rarr;</a>
+    </div>
+
+    <div class="project-card">
+        <div>
+            <h3>Hotel Spiti Valley</h3>
+            <p>End-to-end hospitality business growth development with high-intent on-page localized SEO strategies and automated CRM lead flows.</p>
+        </div>
+        <a href="https://hotelspitivalley.com/" target="_blank" class="project-link">Launch Project &rarr;</a>
+    </div>
+
+    <div class="project-card">
+        <div>
+            <h3>Bungalows in Lonavala</h3>
+            <p>Real Estate conversion-centric tracking architecture natively deployed using Google Tag Manager, GA4 custom event tracking, and Zapier webhooks.</p>
+        </div>
+        <a href="https://bungalowsinlonavala.com/" target="_blank" class="project-link">Launch Project &rarr;</a>
+    </div>
+
+    <div class="project-card">
+        <div>
+            <h3>Dr. Falke Clinic</h3>
+            <p>Healthcare operational web ecosystem featuring structural data layout optimizations and custom automated appointment modules.</p>
+        </div>
+        <a href="https://drfalke.in/" target="_blank" class="project-link">Launch Project &rarr;</a>
+    </div>
+
+    <div class="project-card">
+        <div>
+            <h3>UV Art Gallery</h3>
+            <p>A fully responsive animated web portfolio featuring highly fluid interactive components and modern visual UI layouts.</p>
+        </div>
+        <a href="https://thecodecraftlabs.github.io/UvArt_Gallery/" target="_blank" class="project-link">Launch Project &rarr;</a>
+    </div>
 </div>
 </section>
 
-<section>
-<h2>Certifications</h2>
-<div class="card">
-<ul>
-<li>Google Analytics Certification (GA4)</li>
-<li>HubSpot CRM & Marketing Automation Certification</li>
-<li>Google Tag Manager Certification</li>
-<li>Technical SEO Certification (Semrush / Ahrefs)</li>
-</ul>
+<!-- Additional Background and Metadata Blocks -->
+<section id="additional-info">
+<div class="info-splitter">
+    <div class="info-block">
+        <h3>Education Background</h3>
+        <p style="margin-bottom: 12px; font-weight: 600; color: var(--text-main);">Master of Computer Applications (MCA)</p>
+        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Makhanlal Chaturvedi National University (MCRPV)</p>
+        
+        <p style="margin-bottom: 12px; font-weight: 600; color: var(--text-main);">Bachelor of Computer Applications (BCA)</p>
+        <p style="font-size: 14px; color: var(--text-muted);">Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</p>
+    </div>
+
+    <div class="info-block">
+        <h3>Industry Credentials</h3>
+        <ul style="padding-left: 15px; list-style-type: square;">
+            <li>Google Analytics 4 (GA4) Global Certification</li>
+            <li>HubSpot Inbound CRM & Marketing Automation Certification</li>
+            <li>Google Tag Manager Core Specialist Certification</li>
+            <li>Advanced Technical SEO Audits Certification</li>
+        </ul>
+    </div>
+
+    <div class="info-block">
+        <h3>Personal Details</h3>
+        <p style="font-size: 14px; margin-bottom: 10px; color: var(--text-muted);"><strong style="color:var(--text-main);">Date of Birth:</strong> 05 March 1997</p>
+        <p style="font-size: 14px; margin-bottom: 10px; color: var(--text-muted);"><strong style="color:var(--text-main);">Languages:</strong> Hindi, English</p>
+        <p style="font-size: 14px; margin-bottom: 10px; color: var(--text-muted);"><strong style="color:var(--text-main);">Current Base:</strong> Jabalpur, MP</p>
+        <p style="font-size: 14px; color: var(--text-muted);"><strong style="color:var(--text-main);">Availability Notice:</strong> 30 Days Max</p>
+    </div>
 </div>
 </section>
 
+<!-- Modernized Simple Footer -->
 <footer>
-© 2026 Satyam Shrivastava | CRM & Web Executive | Digital Marketing Specialist
+© 2026 Satyam Shrivastava | Digital Operations, Automation & Brand Specialist
 </footer>
 
 </body>
