@@ -1,34 +1,70 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Satyam Shrivastava | WordPress Developer | PHP Developer</title>
+<title>Satyam Shrivastava | WordPress Developer | MarTech & CRM Developer</title>
 
-<meta name="description" content="Satyam Shrivastava - WordPress Developer with 3+ years of experience in WordPress, PHP, MySQL, JavaScript, responsive websites, website optimization, SEO, CRM integrations and web development.">
+<meta name="description"
+content="Satyam Shrivastava is a WordPress and MarTech Developer with 3+ years of experience in WordPress, PHP, JavaScript, MySQL, CRM integrations, marketing automation, analytics, SEO and website performance.">
 
-<meta name="keywords" content="WordPress Developer, WordPress Developer India, PHP Developer, WordPress PHP Developer, MySQL Developer, Elementor Developer, WooCommerce Developer, JavaScript Developer, HTML CSS Developer, Technical SEO, Website Optimization">
+<meta name="keywords"
+content="WordPress Developer, WordPress PHP Developer, WordPress Developer India, WordPress Developer USA, PHP Developer, Web Developer, MarTech Developer, Marketing Technology Developer, HubSpot Developer, CRM Integration Developer, CRM Automation, Marketing Automation, HubSpot CRM, JavaScript Developer, MySQL Developer, Elementor Developer, WooCommerce Developer, Technical SEO, Website Optimization">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="author" content="Satyam Shrivastava">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title"
+content="Satyam Shrivastava | WordPress & MarTech Developer">
+
+<meta property="og:description"
+content="WordPress, PHP, CRM, marketing automation, analytics and web development professional with 3+ years of experience.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url"
+content="https://satyamhri2.github.io/satyamshrivastava1.github.io/">
+
+<link rel="canonical"
+href="https://satyamhri2.github.io/satyamshrivastava1.github.io/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <style>
 
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 :root {
     --bg-dark: #0b1329;
-    --card-bg: #1c2541;
+    --bg-dark-2: #0f1933;
+    --card-bg: #18233f;
+    --card-bg-hover: #1d2a4a;
+
     --text-main: #f8fafc;
     --text-muted: #cbd5e1;
+
     --primary: #3a86ff;
     --secondary: #06d6a0;
+
     --border-color: #334155;
+    --max-width: 1180px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -39,280 +75,437 @@ body {
     background: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: inherit;
 }
 
 section {
-    padding: 60px 8%;
+    padding: 70px 6%;
     border-bottom: 1px solid var(--border-color);
 }
 
-/* =========================
-   GLOBAL TITLES
-========================= */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
 
 h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
-    margin-bottom: 40px;
-    color: var(--text-main);
+    margin-bottom: 45px;
 }
 
 h2::after {
-    content: '';
+    content: "";
     display: block;
-    width: 45px;
+    width: 50px;
     height: 3px;
     background: var(--primary);
-    margin: 8px auto 0;
-    border-radius: 2px;
+    margin: 10px auto 0;
+    border-radius: 3px;
 }
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 header {
-    min-height: 90vh;
+    min-height: 92vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    padding: 40px 5%;
-    background: radial-gradient(
-        circle at top,
-        #1d2d44 0%,
-        var(--bg-dark) 80%
-    );
+
+    padding: 50px 6%;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1d2d44 0%,
+            var(--bg-dark) 75%
+        );
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 155px;
+    height: 155px;
+
     border-radius: 50%;
+
     object-fit: cover;
+
     border: 4px solid var(--primary);
-    box-shadow: 0 0 20px rgba(58, 134, 255, 0.2);
-    margin-bottom: 20px;
+
+    box-shadow:
+        0 0 25px rgba(58, 134, 255, 0.25);
+
+    margin-bottom: 22px;
 }
 
 header h1 {
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 16px;
     color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
-header p {
-    max-width: 850px;
-    color: var(--text-muted);
     font-size: 16px;
-    margin-bottom: 30px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    margin-bottom: 22px;
 }
 
-/* =========================
+.hero-description {
+    max-width: 900px;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
+
+    margin-bottom: 28px;
+}
+
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+
     justify-content: center;
+
+    gap: 12px;
+
     margin-bottom: 30px;
-    font-size: 14px;
 }
 
 .contact-item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 6px 14px;
+    padding: 7px 14px;
+
     border-radius: 20px;
+
     border: 1px solid var(--border-color);
+
+    background: rgba(255,255,255,0.04);
+
     color: var(--text-muted);
+
+    font-size: 13px;
 }
 
-/* =========================
+/* =========================================================
    BUTTONS
-========================= */
+========================================================= */
 
 .btn-container {
     display: flex;
-    gap: 15px;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
+    gap: 14px;
 }
 
 .btn {
-    padding: 10px 24px;
+    display: inline-block;
+
+    padding: 11px 24px;
+
     border-radius: 25px;
+
     background: var(--primary);
-    color: #fff;
+
+    color: white;
+
     text-decoration: none;
-    font-weight: 600;
+
     font-size: 14px;
-    transition: all 0.3s ease;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.4);
+
+    box-shadow:
+        0 5px 18px rgba(58,134,255,0.35);
 }
 
-.btn.secondary-btn {
+.secondary-btn {
     background: transparent;
+
     border: 2px solid var(--border-color);
 }
 
-.btn.secondary-btn:hover {
-    background: rgba(255,255,255,0.05);
-    border-color: var(--text-muted);
+.secondary-btn:hover {
+    border-color: var(--primary);
+
+    background: rgba(58,134,255,0.08);
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* =========================================================
+   CAREER POSITIONING
+========================================================= */
 
-.skills-category-container {
+.positioning {
+    max-width: 1000px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.positioning p {
+    color: var(--text-muted);
+
+    font-size: 15px;
+}
+
+.role-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+    gap: 15px;
+}
+
+.role-item {
+    background: var(--card-bg);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.role-item:hover {
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
     gap: 20px;
 }
 
 .skill-card {
     background: var(--card-bg);
+
     border: 1px solid var(--border-color);
-    padding: 20px;
+
+    padding: 22px;
+
     border-radius: 10px;
+
     transition: 0.3s ease;
 }
 
 .skill-card:hover {
     transform: translateY(-3px);
+
     border-color: var(--primary);
+
+    background: var(--card-bg-hover);
 }
 
 .skill-card h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
     color: var(--primary);
+
+    font-size: 17px;
+
+    margin-bottom: 14px;
+
+    padding-bottom: 8px;
+
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 6px;
 }
 
 .skill-tags {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 8px;
 }
 
 .tag {
     background: rgba(255,255,255,0.05);
+
     border: 1px solid rgba(255,255,255,0.08);
-    padding: 5px 10px;
+
+    padding: 5px 9px;
+
     border-radius: 6px;
+
     font-size: 12px;
+
     color: var(--text-muted);
 }
 
-/* =========================
+/* =========================================================
    EXPERIENCE
-========================= */
+========================================================= */
 
 .experience-container {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 950px;
+
+    margin: auto;
 }
 
-.card {
+.experience-card {
     background: var(--card-bg);
+
     border-left: 4px solid var(--primary);
+
     padding: 25px;
-    border-radius: 0 10px 10px 0;
+
     margin-bottom: 25px;
+
+    border-radius:
+        0 10px 10px 0;
+
     border-top: 1px solid var(--border-color);
+
     border-right: 1px solid var(--border-color);
+
     border-bottom: 1px solid var(--border-color);
 }
 
-.card h3 {
-    font-size: 18px;
-    color: var(--text-main);
-    margin-bottom: 4px;
+.experience-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
 }
 
 .company-meta {
-    font-size: 13px;
     color: var(--secondary);
-    font-weight: 500;
-    margin-bottom: 12px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
 }
 
-ul {
-    padding-left: 18px;
+.experience-card ul {
+    padding-left: 20px;
 }
 
-ul li {
-    margin-bottom: 8px;
+.experience-card li {
     color: var(--text-muted);
+
     font-size: 14px;
+
+    margin-bottom: 9px;
 }
 
-ul li strong {
+.experience-card strong {
     color: var(--text-main);
 }
 
-/* =========================
+/* =========================================================
    PROJECTS
-========================= */
+========================================================= */
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
     gap: 20px;
 }
 
 .project-card {
     background: var(--card-bg);
+
     border: 1px solid var(--border-color);
-    padding: 20px;
+
+    padding: 22px;
+
     border-radius: 10px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
-    transition: transform 0.2s ease;
+
+    transition: 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-3px);
+
     border-color: var(--primary);
 }
 
 .project-card h3 {
-    font-size: 17px;
-    margin-bottom: 8px;
-    color: var(--text-main);
+    font-size: 18px;
+
+    margin-bottom: 9px;
 }
 
 .project-card p {
-    font-size: 13px;
     color: var(--text-muted);
-    margin-bottom: 15px;
-    flex-grow: 1;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
 }
 
 .project-link {
     color: var(--primary);
+
     text-decoration: none;
+
     font-weight: 600;
+
     font-size: 13px;
 }
 
@@ -320,106 +513,145 @@ ul li strong {
     text-decoration: underline;
 }
 
-/* =========================
-   EDUCATION + DETAILS
-========================= */
+/* =========================================================
+   EDUCATION / INFO
+========================================================= */
 
-.info-splitter {
+.info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
     gap: 20px;
 }
 
-.info-block {
+.info-card {
     background: var(--card-bg);
-    padding: 20px;
+
+    padding: 22px;
+
     border-radius: 10px;
+
     border: 1px solid var(--border-color);
 }
 
-.info-block h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
+.info-card h3 {
     color: var(--primary);
+
+    margin-bottom: 15px;
+
+    font-size: 18px;
 }
 
-/* =========================
+.info-card p {
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
     text-align: center;
-    padding: 25px;
+
+    padding: 28px;
+
     background: #060b18;
+
     color: var(--text-muted);
+
     font-size: 13px;
-    border-top: 1px solid var(--border-color);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
 
-    header h1 {
-        font-size: 30px;
+    section {
+        padding: 50px 5%;
     }
 
-    header p {
+    header {
+        min-height: auto;
+
+        padding:
+            70px 5%;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
         font-size: 14px;
     }
 
-    section {
-        padding: 40px 5%;
-    }
-
-    h2 {
-        font-size: 24px;
+    .hero-description {
+        font-size: 14px;
     }
 
     .profile-img {
         width: 125px;
         height: 125px;
     }
+
+    h2 {
+        font-size: 25px;
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <header>
 
     <img
         src="satyam.jpeg"
-        alt="Satyam Shrivastava WordPress Developer"
+        alt="Satyam Shrivastava - WordPress and MarTech Developer"
         class="profile-img"
     >
 
     <h1>Satyam Shrivastava</h1>
 
     <div class="subtitle">
-        WordPress Developer • PHP • MySQL • JavaScript
+        WordPress & MarTech Developer | PHP | CRM | Automation | Analytics
     </div>
 
-    <p>
-        Results-driven WordPress Developer with 3+ years of experience
-        in building, maintaining and optimizing responsive websites.
-        Experienced in WordPress development, PHP, MySQL, HTML5, CSS3,
-        JavaScript, website performance optimization, technical SEO,
-        CRM integrations and automation.
+    <p class="hero-description">
+
+        Results-driven Web Developer with 3+ years of experience
+        building, maintaining and optimizing business and
+        institutional websites.
+
+        Primary expertise in WordPress, PHP, MySQL and JavaScript,
+        with additional experience in CRM integrations,
+        marketing automation, analytics, technical SEO,
+        website performance and digital workflows.
+
     </p>
+
 
     <div class="contact-info">
 
         <div class="contact-item">
-            📍 Jabalpur, Madhya Pradesh
+            📍 Jabalpur, Madhya Pradesh, India
         </div>
 
         <div class="contact-item">
@@ -432,21 +664,34 @@ footer {
 
     </div>
 
+
     <div class="btn-container">
 
         <a
-            href="https://satyamhri2.github.io/code-craft/"
+            href="https://www.linkedin.com/in/satyam-shrivastava/"
             target="_blank"
+            rel="noopener"
             class="btn"
         >
-            Visit Portfolio
+            LinkedIn
         </a>
+
+
+        <a
+            href="https://github.com/satyamhri2"
+            target="_blank"
+            rel="noopener"
+            class="btn"
+        >
+            GitHub
+        </a>
+
 
         <a
             href="SATYAM SHRIVASTAVA Digital.pdf"
             class="btn secondary-btn"
         >
-            Download Resume
+            Resume
         </a>
 
     </div>
@@ -454,17 +699,102 @@ footer {
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
+     TARGET ROLES
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<h2>Professional Focus</h2>
+
+<div class="positioning">
+
+<p>
+
+My experience combines WordPress development with
+web technologies, CRM integrations, analytics and
+marketing automation.
+
+This allows me to work across development,
+website operations and MarTech-focused teams.
+
+</p>
+
+</div>
+
+
+<div class="role-grid">
+
+    <div class="role-item">
+        WordPress Developer
+    </div>
+
+    <div class="role-item">
+        WordPress PHP Developer
+    </div>
+
+    <div class="role-item">
+        Web Developer
+    </div>
+
+    <div class="role-item">
+        Full Stack Web Developer
+    </div>
+
+    <div class="role-item">
+        WordPress CRM Developer
+    </div>
+
+    <div class="role-item">
+        CRM Integration Developer
+    </div>
+
+    <div class="role-item">
+        HubSpot Developer
+    </div>
+
+    <div class="role-item">
+        Marketing Automation Developer
+    </div>
+
+    <div class="role-item">
+        MarTech Developer
+    </div>
+
+    <div class="role-item">
+        Marketing Technology Engineer
+    </div>
+
+    <div class="role-item">
+        Web & Marketing Technology Specialist
+    </div>
+
+    <div class="role-item">
+        Website Optimization Specialist
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
      TECHNICAL SKILLS
-========================= -->
+===================================================== -->
 
 <section id="skills">
 
+<div class="container">
+
 <h2>Technical Skills</h2>
 
-<div class="skills-category-container">
 
-    <!-- WordPress -->
+<div class="skills-grid">
+
 
     <div class="skill-card">
 
@@ -475,17 +805,19 @@ footer {
             <span class="tag">WordPress</span>
             <span class="tag">Custom Themes</span>
             <span class="tag">Custom Plugins</span>
+            <span class="tag">Theme Customization</span>
+            <span class="tag">Plugin Integration</span>
             <span class="tag">Elementor</span>
             <span class="tag">WooCommerce</span>
-            <span class="tag">WordPress CMS</span>
+            <span class="tag">CMS Management</span>
+            <span class="tag">Website Migration</span>
+            <span class="tag">Bug Fixing</span>
             <span class="tag">Website Maintenance</span>
 
         </div>
 
     </div>
 
-
-    <!-- Programming -->
 
     <div class="skill-card">
 
@@ -501,49 +833,86 @@ footer {
             <span class="tag">jQuery</span>
             <span class="tag">AJAX</span>
             <span class="tag">Bootstrap</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Responsive Web Design</span>
 
         </div>
 
     </div>
 
 
-    <!-- Performance -->
-
     <div class="skill-card">
 
-        <h3>Performance & SEO</h3>
-
-        <div class="skill-tags">
-
-            <span class="tag">Core Web Vitals</span>
-            <span class="tag">PageSpeed Optimization</span>
-            <span class="tag">Technical SEO</span>
-            <span class="tag">On-Page SEO</span>
-            <span class="tag">Schema Markup</span>
-            <span class="tag">Image Optimization</span>
-            <span class="tag">Caching</span>
-            <span class="tag">CDN</span>
-
-        </div>
-
-    </div>
-
-
-    <!-- Integrations -->
-
-    <div class="skill-card">
-
-        <h3>Integrations & Tools</h3>
+        <h3>CRM & Marketing Technology</h3>
 
         <div class="skill-tags">
 
             <span class="tag">HubSpot CRM</span>
-            <span class="tag">REST API</span>
+            <span class="tag">CRM Integration</span>
+            <span class="tag">Lead Capture</span>
+            <span class="tag">Marketing Automation</span>
+            <span class="tag">CRM Workflows</span>
+            <span class="tag">API Integration</span>
+            <span class="tag">Webhooks</span>
             <span class="tag">Zapier</span>
-            <span class="tag">GA4</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <h3>Analytics & Tracking</h3>
+
+        <div class="skill-tags">
+
+            <span class="tag">Google Analytics 4</span>
             <span class="tag">Google Tag Manager</span>
+            <span class="tag">Event Tracking</span>
+            <span class="tag">Conversion Tracking</span>
+            <span class="tag">Lead Tracking</span>
+            <span class="tag">Marketing Analytics</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <h3>SEO & Performance</h3>
+
+        <div class="skill-tags">
+
+            <span class="tag">Technical SEO</span>
+            <span class="tag">On-Page SEO</span>
+            <span class="tag">Schema Markup</span>
+            <span class="tag">Core Web Vitals</span>
+            <span class="tag">PageSpeed Optimization</span>
+            <span class="tag">Caching</span>
+            <span class="tag">CDN</span>
+            <span class="tag">Image Optimization</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <h3>Tools & Workflow</h3>
+
+        <div class="skill-tags">
+
             <span class="tag">Git</span>
             <span class="tag">GitHub</span>
+            <span class="tag">cPanel</span>
+            <span class="tag">Hosting</span>
+            <span class="tag">DNS</span>
+            <span class="tag">SSL</span>
+            <span class="tag">Website Deployment</span>
+            <span class="tag">Troubleshooting</span>
 
         </div>
 
@@ -551,75 +920,95 @@ footer {
 
 </div>
 
+</div>
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      EXPERIENCE
-========================= -->
+===================================================== -->
 
 <section id="experience">
 
+<div class="container">
+
 <h2>Professional Experience</h2>
+
 
 <div class="experience-container">
 
 
     <!-- EXPERIENCE 1 -->
 
-    <div class="card">
+    <div class="experience-card">
 
-        <h3>Full Stack / WordPress Developer</h3>
+        <h3>
+            Full Stack / WordPress Developer
+        </h3>
 
         <div class="company-meta">
-            ICMR-NIRTH (via Raygain Technologies) | Jun 2023 – Present
+            ICMR-NIRTH via Raygain Technologies |
+            Jun 2023 – Present
         </div>
+
 
         <ul>
 
             <li>
-                <strong>WordPress & Website Development:</strong>
-                Managed and developed institutional web platforms,
-                including website updates, new pages, content modules
-                and frontend improvements.
+                Developed and maintained WordPress-based
+                institutional web platforms, website pages,
+                content sections and web functionality.
             </li>
 
             <li>
-                <strong>Frontend Development:</strong>
-                Developed responsive interfaces using HTML5, CSS3,
-                JavaScript, jQuery and Bootstrap.
+                Worked extensively with
+                <strong>WordPress, PHP, MySQL, HTML5, CSS3,
+                JavaScript, jQuery and Bootstrap</strong>
+                for website and application development.
             </li>
 
             <li>
-                <strong>PHP & MySQL:</strong>
-                Worked on PHP-based web applications and MySQL
-                database-driven systems.
+                Built and maintained PHP/MySQL-based
+                web applications and database-driven
+                business workflows.
             </li>
 
             <li>
-                <strong>Website Performance:</strong>
-                Improved website performance and Core Web Vitals,
-                increasing PageSpeed scores from approximately
-                62 to 92+.
+                Managed website updates including
+                vacancies, tenders, staff information,
+                publications, announcements and
+                institutional content.
             </li>
 
             <li>
-                <strong>Website Maintenance:</strong>
-                Managed website content, vacancies, tenders,
-                staff information, publications and institutional
-                web pages.
+                Implemented responsive UI improvements
+                across desktop, tablet and mobile devices.
             </li>
 
             <li>
-                <strong>SEO:</strong>
-                Implemented technical SEO improvements, structured
-                data and website optimization practices.
+                Worked on website performance,
+                page-speed optimization, caching,
+                image optimization and Core Web Vitals.
             </li>
 
             <li>
-                <strong>Analytics & Integrations:</strong>
-                Implemented GA4 and Google Tag Manager tracking
-                and integrated third-party systems where required.
+                Implemented technical SEO improvements,
+                structured data and SEO-friendly
+                website architecture.
+            </li>
+
+            <li>
+                Worked with
+                <strong>Google Analytics 4 and Google
+                Tag Manager</strong>
+                for website and conversion tracking.
+            </li>
+
+            <li>
+                Supported hosting, DNS, SSL, deployment,
+                website troubleshooting and ongoing
+                technical maintenance.
             </li>
 
         </ul>
@@ -629,50 +1018,63 @@ footer {
 
     <!-- EXPERIENCE 2 -->
 
-    <div class="card">
+    <div class="experience-card">
 
-        <h3>WordPress Developer</h3>
+        <h3>
+            WordPress Developer
+        </h3>
 
         <div class="company-meta">
-            MBG Card Pvt. Ltd. | Aug 2022 – May 2023
+            MBG Card Pvt. Ltd. |
+            Aug 2022 – May 2023
         </div>
+
 
         <ul>
 
             <li>
-                <strong>WordPress Development:</strong>
-                Built and maintained responsive WordPress websites
-                based on business requirements.
+                Developed and maintained responsive
+                WordPress websites based on business
+                and client requirements.
             </li>
 
             <li>
-                <strong>Frontend Development:</strong>
-                Developed responsive layouts using HTML, CSS,
-                JavaScript and Bootstrap.
+                Customized WordPress themes,
+                plugins, page layouts and website
+                functionality.
             </li>
 
             <li>
-                <strong>PHP Development:</strong>
-                Worked with PHP for website customization,
-                backend functionality and WordPress modifications.
+                Used
+                <strong>PHP, HTML, CSS, JavaScript,
+                Bootstrap and MySQL</strong>
+                for website customization and
+                development.
             </li>
 
             <li>
-                <strong>CRM Integration:</strong>
-                Integrated WordPress websites with HubSpot
-                lead generation forms and CRM workflows.
+                Integrated website lead-generation
+                forms with CRM systems and
+                marketing workflows.
             </li>
 
             <li>
-                <strong>SEO:</strong>
-                Implemented technical SEO fixes, structured
-                schema data and on-page optimization.
+                Worked with
+                <strong>HubSpot CRM</strong>
+                for lead capture and CRM-related
+                website integrations.
             </li>
 
             <li>
-                <strong>Performance:</strong>
-                Optimized website loading speed through image
-                compression, caching and CDN implementation.
+                Implemented technical SEO,
+                structured data and on-page
+                optimization.
+            </li>
+
+            <li>
+                Improved website performance through
+                caching, image optimization and
+                CDN-related optimization.
             </li>
 
         </ul>
@@ -682,55 +1084,64 @@ footer {
 
     <!-- EXPERIENCE 3 -->
 
-    <div class="card">
+    <div class="experience-card">
 
-        <h3>CRM Assistant / Web Support</h3>
+        <h3>
+            CRM Assistant / Web Support
+        </h3>
 
         <div class="company-meta">
-            Stock Holding DMS Ltd. | 2020 – 2022
+            Stock Holding DMS Ltd. |
+            2020 – 2022
         </div>
+
 
         <ul>
 
             <li>
-                <strong>CRM Operations:</strong>
-                Managed data, reports, dashboards and CRM-related
-                operational activities.
+                Supported CRM operations,
+                data management, reporting and
+                dashboard-related activities.
             </li>
 
             <li>
-                <strong>Technical Support:</strong>
-                Assisted with internal systems, reporting and
-                website-related support activities.
+                Assisted internal teams with
+                technical systems and
+                operational requirements.
             </li>
 
             <li>
-                <strong>Client Coordination:</strong>
-                Coordinated with teams to resolve operational
-                and technical requirements.
+                Coordinated with teams to
+                understand requirements and
+                resolve technical and
+                operational issues.
             </li>
 
         </ul>
 
     </div>
 
+
+</div>
+
 </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      PROJECTS
-========================= -->
+===================================================== -->
 
 <section id="projects">
 
-<h2>Key Development Projects</h2>
+<div class="container">
+
+<h2>Selected Projects</h2>
+
 
 <div class="projects-grid">
 
-
-    <!-- PROJECT 1 -->
 
     <div class="project-card">
 
@@ -739,9 +1150,11 @@ footer {
             <h3>ICMR-NIRTH Website</h3>
 
             <p>
-                Institutional website development and maintenance
-                with responsive UI, technical SEO, website performance
-                optimization, content management and analytics setup.
+                Institutional website development and
+                maintenance including WordPress/web
+                development, content management,
+                responsive UI, SEO, performance
+                optimization and analytics.
             </p>
 
         </div>
@@ -749,6 +1162,7 @@ footer {
         <a
             href="https://nirth.res.in"
             target="_blank"
+            rel="noopener"
             class="project-link"
         >
             Visit Project →
@@ -756,8 +1170,6 @@ footer {
 
     </div>
 
-
-    <!-- PROJECT 2 -->
 
     <div class="project-card">
 
@@ -766,9 +1178,10 @@ footer {
             <h3>INBIX 2025 Portal</h3>
 
             <p>
-                Event portal development and management with
-                registration workflows, responsive frontend,
-                analytics tracking and user journey optimization.
+                Event portal development with
+                responsive frontend, registration
+                workflows, analytics tracking and
+                user journey optimization.
             </p>
 
         </div>
@@ -776,6 +1189,7 @@ footer {
         <a
             href="https://inbix2025.icmrnirth.org/"
             target="_blank"
+            rel="noopener"
             class="project-link"
         >
             Visit Project →
@@ -783,8 +1197,6 @@ footer {
 
     </div>
 
-
-    <!-- PROJECT 3 -->
 
     <div class="project-card">
 
@@ -793,9 +1205,10 @@ footer {
             <h3>Hotel Spiti Valley</h3>
 
             <p>
-                Hospitality website developed with responsive
-                design, SEO optimization, lead generation forms
-                and business-focused website structure.
+                Hospitality website focused on
+                responsive design, SEO, lead
+                generation and conversion-focused
+                website structure.
             </p>
 
         </div>
@@ -803,6 +1216,7 @@ footer {
         <a
             href="https://hotelspitivalley.com/"
             target="_blank"
+            rel="noopener"
             class="project-link"
         >
             Visit Project →
@@ -810,8 +1224,6 @@ footer {
 
     </div>
 
-
-    <!-- PROJECT 4 -->
 
     <div class="project-card">
 
@@ -820,9 +1232,10 @@ footer {
             <h3>Bungalows in Lonavala</h3>
 
             <p>
-                Business website with responsive UI, conversion
-                tracking, GA4 events, Google Tag Manager and
-                automated lead data synchronization.
+                Business website with responsive UI,
+                conversion tracking, GA4,
+                Google Tag Manager and
+                lead-data synchronization.
             </p>
 
         </div>
@@ -830,6 +1243,7 @@ footer {
         <a
             href="https://bungalowsinlonavala.com/"
             target="_blank"
+            rel="noopener"
             class="project-link"
         >
             Visit Project →
@@ -837,8 +1251,6 @@ footer {
 
     </div>
 
-
-    <!-- PROJECT 5 -->
 
     <div class="project-card">
 
@@ -847,9 +1259,10 @@ footer {
             <h3>Dr. Falke Clinic</h3>
 
             <p>
-                Healthcare website with appointment booking
-                functionality, responsive design, structured
-                schema markup and SEO-friendly architecture.
+                Healthcare website with appointment
+                functionality, responsive design,
+                structured data and SEO-friendly
+                architecture.
             </p>
 
         </div>
@@ -857,6 +1270,7 @@ footer {
         <a
             href="https://drfalke.in/"
             target="_blank"
+            rel="noopener"
             class="project-link"
         >
             Visit Project →
@@ -864,8 +1278,6 @@ footer {
 
     </div>
 
-
-    <!-- PROJECT 6 -->
 
     <div class="project-card">
 
@@ -874,9 +1286,9 @@ footer {
             <h3>UV Art Gallery</h3>
 
             <p>
-                Responsive interactive portfolio website with
-                modern frontend layouts, animations and
-                mobile-friendly user experience.
+                Responsive interactive website with
+                modern frontend layouts, animations
+                and mobile-friendly user experience.
             </p>
 
         </div>
@@ -884,6 +1296,7 @@ footer {
         <a
             href="https://thecodecraftlabs.github.io/UvArt_Gallery/"
             target="_blank"
+            rel="noopener"
             class="project-link"
         >
             Visit Project →
@@ -891,33 +1304,42 @@ footer {
 
     </div>
 
+
+</div>
+
 </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      DEVELOPMENT EXPERTISE
-========================= -->
+===================================================== -->
 
-<section id="expertise">
+<section>
+
+<div class="container">
 
 <h2>Development Expertise</h2>
 
-<div class="skills-category-container">
+
+<div class="skills-grid">
+
 
     <div class="skill-card">
 
-        <h3>WordPress</h3>
+        <h3>WordPress Engineering</h3>
 
         <div class="skill-tags">
 
-            <span class="tag">Theme Customization</span>
-            <span class="tag">Plugin Integration</span>
-            <span class="tag">CMS Management</span>
-            <span class="tag">Responsive Design</span>
-            <span class="tag">Website Migration</span>
+            <span class="tag">Custom Themes</span>
+            <span class="tag">Plugin Customization</span>
+            <span class="tag">Elementor</span>
+            <span class="tag">WooCommerce</span>
+            <span class="tag">CMS</span>
+            <span class="tag">Migration</span>
             <span class="tag">Bug Fixing</span>
+            <span class="tag">Maintenance</span>
 
         </div>
 
@@ -926,7 +1348,7 @@ footer {
 
     <div class="skill-card">
 
-        <h3>Backend</h3>
+        <h3>Backend Development</h3>
 
         <div class="skill-tags">
 
@@ -943,16 +1365,16 @@ footer {
 
     <div class="skill-card">
 
-        <h3>Frontend</h3>
+        <h3>CRM & Automation</h3>
 
         <div class="skill-tags">
 
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">jQuery</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">Responsive UI</span>
+            <span class="tag">HubSpot CRM</span>
+            <span class="tag">Lead Management</span>
+            <span class="tag">CRM Integration</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Zapier</span>
+            <span class="tag">Webhooks</span>
 
         </div>
 
@@ -961,14 +1383,14 @@ footer {
 
     <div class="skill-card">
 
-        <h3>Optimization</h3>
+        <h3>Marketing Technology</h3>
 
         <div class="skill-tags">
 
-            <span class="tag">Core Web Vitals</span>
-            <span class="tag">PageSpeed</span>
-            <span class="tag">Caching</span>
-            <span class="tag">CDN</span>
+            <span class="tag">GA4</span>
+            <span class="tag">GTM</span>
+            <span class="tag">Conversion Tracking</span>
+            <span class="tag">Lead Tracking</span>
             <span class="tag">Technical SEO</span>
 
         </div>
@@ -977,122 +1399,158 @@ footer {
 
 </div>
 
+</div>
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      EDUCATION
-========================= -->
+===================================================== -->
 
-<section id="additional-info">
+<section id="education">
 
-<div class="info-splitter">
+<div class="container">
+
+<h2>Education & Professional Information</h2>
 
 
-    <div class="info-block">
+<div class="info-grid">
 
-        <h3>Education Background</h3>
 
-        <p style="
-            margin-bottom: 6px;
-            font-weight: 600;
-            color: var(--text-main);
-        ">
-            Master of Computer Applications (MCA)
+    <div class="info-card">
+
+        <h3>Education</h3>
+
+        <p>
+            <strong>Master of Computer Applications (MCA)</strong>
         </p>
 
-        <p style="
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        ">
-            Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)
+        <p>
+            Rajiv Gandhi Proudyogiki Vishwavidyalaya
+            (RGPV)
         </p>
 
+        <br>
 
-        <p style="
-            margin-bottom: 6px;
-            font-weight: 600;
-            color: var(--text-main);
-        ">
-            Bachelor of Computer Applications (BCA)
+        <p>
+            <strong>
+                Bachelor of Computer Applications (BCA)
+            </strong>
         </p>
 
-        <p style="
-            font-size: 13px;
-            color: var(--text-muted);
-        ">
-            Makhanlal Chaturvedi National University (MCRPV)
+        <p>
+            Makhanlal Chaturvedi National University
         </p>
 
     </div>
 
 
-    <div class="info-block">
+    <div class="info-card">
 
-        <h3>Professional Information</h3>
+        <h3>Professional Profile</h3>
 
-        <p style="
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: var(--text-muted);
-        ">
-            <strong style="color:var(--text-main);">
-                Experience:
-            </strong>
+        <p>
+            <strong>Experience:</strong>
             3+ Years
         </p>
 
-        <p style="
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: var(--text-muted);
-        ">
-            <strong style="color:var(--text-main);">
-                Primary Role:
-            </strong>
-            WordPress Developer
+        <p>
+            <strong>Primary Expertise:</strong>
+            WordPress Development
         </p>
 
-        <p style="
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: var(--text-muted);
-        ">
-            <strong style="color:var(--text-main);">
-                Location:
-            </strong>
-            Jabalpur, Madhya Pradesh
+        <p>
+            <strong>Secondary Expertise:</strong>
+            PHP, CRM, Automation, Analytics
         </p>
 
-        <p style="
-            font-size: 14px;
-            color: var(--text-muted);
-        ">
-            <strong style="color:var(--text-main);">
-                Availability:
-            </strong>
+        <p>
+            <strong>Location:</strong>
+            Jabalpur, Madhya Pradesh, India
+        </p>
+
+        <p>
+            <strong>Availability:</strong>
             30 Days
         </p>
 
     </div>
+
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
+     CONTACT CTA
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<h2>Let's Work Together</h2>
+
+<div class="positioning">
+
+<p>
+
+Open to opportunities involving WordPress development,
+PHP/web development, CRM integrations, marketing
+technology, automation, analytics and website
+optimization.
+
+</p>
+
+</div>
+
+
+<div class="btn-container">
+
+    <a
+        href="mailto:satyamshri2@gmail.com"
+        class="btn"
+    >
+        Contact Me
+    </a>
+
+    <a
+        href="https://www.linkedin.com/in/satyam-shrivastava/"
+        target="_blank"
+        rel="noopener"
+        class="btn secondary-btn"
+    >
+        LinkedIn
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-    © 2026 Satyam Shrivastava |
-    WordPress Developer • PHP • MySQL • Web Development
+    © 2026 Satyam Shrivastava
+
+    <br>
+
+    WordPress Developer |
+    PHP Developer |
+    MarTech & CRM Developer
 
 </footer>
 
-</body>
 
+</body>
 </html>
+```
